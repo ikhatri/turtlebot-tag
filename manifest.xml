@@ -1,0 +1,17 @@
+<package>
+  <description brief="turtlebot_tag">
+
+     turtlebot_tag
+
+  </description>
+  <author>Ishan Khatri</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/turtlebot_tag</url>
+  <depend package="std_msgs"/>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+
+</package>
+
+
