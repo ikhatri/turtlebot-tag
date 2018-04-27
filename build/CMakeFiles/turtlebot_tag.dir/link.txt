@@ -1,1 +1,0 @@
-/usr/bin/c++   -O2 -g -DNDEBUG   CMakeFiles/turtlebot_tag.dir/src/turtlebot_tag.cpp.o  -o ../bin/turtlebot_tag  -L/opt/ros/kinetic/lib -rdynamic 
