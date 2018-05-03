@@ -17,6 +17,7 @@
   <depend package="rospy"/>
   <depend package="visualization_msgs"/>
   <depend package="cobot_msgs"/>
+  <depend package="message_filters" />
   <!--<depend package="turtlebot">
   <depend package="turtlebot_msgs">
   <depend package="turtlebot_simulator">-->
