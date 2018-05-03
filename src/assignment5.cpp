@@ -14,11 +14,11 @@
 #include <nav_msgs/Odometry.h>
 #include <visualization_msgs/Marker.h>
 
-#include "compsci403_assignment5/CheckPointSrv.h"
-#include "compsci403_assignment5/GetFreePathSrv.h"
-#include "compsci403_assignment5/ObstacleLaserScanSrv.h"
-#include "compsci403_assignment5/GetCommandVelSrv.h"
-#include "compsci403_assignment5/GetTransformationSrv.h"
+#include "turtlebot_tag/CheckPointSrv.h"
+#include "turtlebot_tag/GetFreePathSrv.h"
+#include "turtlebot_tag/ObstacleLaserScanSrv.h"
+#include "turtlebot_tag/GetCommandVelSrv.h"
+#include "turtlebot_tag/GetTransformationSrv.h"
 
 using Eigen::Matrix3f;
 using Eigen::MatrixXf;
@@ -36,11 +36,11 @@ using std::cout;
 using std::vector;
 using namespace std;
 
-using compsci403_assignment5::CheckPointSrv;
-using compsci403_assignment5::GetFreePathSrv;
-using compsci403_assignment5::ObstacleLaserScanSrv;
-using compsci403_assignment5::GetCommandVelSrv;
-using compsci403_assignment5::GetTransformationSrv;
+using turtlebot_tag::CheckPointSrv;
+using turtlebot_tag::GetFreePathSrv;
+using turtlebot_tag::ObstacleLaserScanSrv;
+using turtlebot_tag::GetCommandVelSrv;
+using turtlebot_tag::GetTransformationSrv;
 
 // Services and Subscribers
 ros::ServiceServer checkPointServer;
@@ -86,7 +86,8 @@ float speedWeight = 0.0;
 float clearanceWeight = 0.0;
 float stopDistanceOffset = 0.0;
 
-Point32 target; 
+Point32 target;
+bool finished = false; 
 
 /*
 // Global Parameters
@@ -499,7 +500,7 @@ void updateVelocity() {
     output.angular.z = 0;
 
     ROS_INFO("PLAYED TIL COMPLETION. COMPLETION IS HERE <3");
-    cobotDrivePublisher.publish(driveMsg);
+    driveMsgPublisher.publish(output);
     //ROS_INFO("DRIVE MESSAGE PUBLISHED:\nV = %f, W = %f\n\n\n\n", driveMsg.v, driveMsg.w);
     return;
   }
@@ -548,7 +549,7 @@ void odometeryCallback(const Odometry& odom) {
 }
 
 int main(int argc, char **argv) {
-  ros::init(argc, argv, "compsci403_assignment5");
+  ros::init(argc, argv, "assignment5");
   ros::NodeHandle n;
 
   if (argc != 8) {

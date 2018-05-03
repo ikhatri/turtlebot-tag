@@ -6,18 +6,18 @@
 #include <visualization_msgs/Marker.h>
 
 #include "cobot_msgs/CobotDriveMsg.h"
-#include "compsci403_assignment4/ObstacleMsg.h"
-#include "compsci403_assignment4/CheckPointSrv.h"
-#include "compsci403_assignment4/GetFreePathSrv.h"
-#include "compsci403_assignment4/GetCommandVelSrv.h"
+#include "turtlebot_tag/ObstacleMsg.h"
+#include "turtlebot_tag/CheckPointSrv.h"
+#include "turtlebot_tag/GetFreePathSrv.h"
+#include "turtlebot_tag/GetCommandVelSrv.h"
 
 #include <math.h> // sqrt
 
 using cobot_msgs::CobotDriveMsg;
-using compsci403_assignment4::ObstacleMsg;
-using compsci403_assignment4::CheckPointSrv;
-using compsci403_assignment4::GetFreePathSrv;
-using compsci403_assignment4::GetCommandVelSrv;
+using turtlebot_tag::ObstacleMsg;
+using turtlebot_tag::CheckPointSrv;
+using turtlebot_tag::GetFreePathSrv;
+using turtlebot_tag::GetCommandVelSrv;
 
 using std::vector;
 using geometry_msgs::Point32;
