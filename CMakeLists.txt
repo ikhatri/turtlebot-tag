@@ -32,5 +32,7 @@ SET(libs roslib roscpp)
 #rosbuild_add_executable(example examples/example.cpp)
 #target_link_libraries(example ${PROJECT_NAME})
 
+add_executable(dynamic_window src/dynamic_window.cpp)
 add_executable(turtlebot_tag src/turtlebot_tag.cpp)
+
 target_link_libraries(turtlebot_tag ${libs})

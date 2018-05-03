@@ -1,0 +1,17 @@
+<package>
+  <description brief="compsci403_assignment4">
+
+     compsci403_assignment4
+
+  </description>
+  <author>Tiffany Q. Liu</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url></url>
+  <depend package="cobot_msgs"/>
+  <depend package="geometry_msgs"/>
+  <depend package="sensor_msgs"/>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+
+</package>
