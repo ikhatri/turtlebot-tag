@@ -34,13 +34,13 @@ if (${OpenCV_VERSION} MATCHES "3.3.1")
   endforeach(__cvcomponent)
 endif()
 
-ROSBUILD_ADD_EXECUTABLE(turtlebot_sim src/assignment4.cpp)
+ROSBUILD_ADD_EXECUTABLE(turtlebot_sim src/turtlebot_sim.cpp)
 TARGET_LINK_LIBRARIES(turtlebot_sim ${libs})
 ROSBUILD_LINK_BOOST(turtlebot_sim system)
 
-ROSBUILD_ADD_EXECUTABLE(assignment5 src/assignment5.cpp)
-TARGET_LINK_LIBRARIES(assignment5 ${libs})
-ROSBUILD_LINK_BOOST(assignment5 system)
+ROSBUILD_ADD_EXECUTABLE(blob_detection src/blob_detection.cpp)
+TARGET_LINK_LIBRARIES(blob_detection ${libs} ${OpenCV_LIBS})
+ROSBUILD_LINK_BOOST(blob_detection system)
 
 ROSBUILD_ADD_EXECUTABLE(get_transform src/get_transform.cpp)
 TARGET_LINK_LIBRARIES(get_transform ${libs})

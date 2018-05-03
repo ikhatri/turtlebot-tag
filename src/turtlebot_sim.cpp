@@ -621,7 +621,7 @@ int main(int argc, char **argv) {
   int count = 0;
   while (ros::ok()) {
     count++;
-    ROS_INFO("HERES UR COUNT BITCH %i", count);
+    //ROS_INFO("HERES UR COUNT BITCH %i", count);
     if(count % 300 == 0){
       target.x = -1 * target.x;
     }
